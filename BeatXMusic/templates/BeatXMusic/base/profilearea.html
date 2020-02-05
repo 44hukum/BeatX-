@@ -1,0 +1,33 @@
+{% load static %}
+<div class="user-content">
+    <!-- Profile of User -->
+    <form method="post" action="/beatXmusic/uploadprofile/" enctype="multipart/form-data">
+        {% csrf_token%}
+       <div class="user-profile">
+        <label for="profileupload">
+          <img src="/uploaded/{{ profile }}">
+        </label>
+        <input id="profileupload" type="file" name="ChangeProfilePic" accept="image/*">
+        <div class="info">
+          <h1>{{ username }}</h1>
+          <a href="/beatXmusic/viewProfile"> View Profile <img src="{%static 'BeatXMusic/svg/forward.svg'%}" style="width: 10px; height: 10px;"></a>
+        </div>
+      </div>
+      <button type="submit" id="uploadprofilepicBeatX" name="button"></button>
+    </form>
+    {% block content %}
+    {% endblock %}
+
+  <script>
+$(document).ready(function(){
+  $('#profileupload').change(function(e){
+    var file= e.target.files[0].name;
+    if(confirm("upload profile"+file)){
+      document.getElementById("uploadprofilepicBeatX").click()
+    }
+    else{
+
+    }
+  });
+});
+    </script>

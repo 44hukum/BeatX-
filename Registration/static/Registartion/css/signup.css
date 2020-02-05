@@ -1,0 +1,151 @@
+@font-face{
+    font-family: "ProximaNovaThin";
+    src: url("../fonts/Proxima Nova Thin.otf");
+}
+@font-face{
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/Proxima Nova Bold.otf");
+}
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 800px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,58,136,1) 0%, rgba(124,33,255,1) 100%);
+
+}
+.signup{
+    opacity: 1;
+    top: 2em;
+    position: relative;
+    width:240px;
+    border-top: 2px solid #D8312A;
+    height:580px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    top:0;
+    bottom:0;
+    padding:100px 40px 40px 40px;
+    background: #35394a;
+}
+.signup .signup-title span{
+    color: rgb(175, 177, 190);
+    display: block;
+    height: 70px;
+    font-family: ProximaNovaBold;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 20px;
+}
+.signup .signup-title img{
+    margin-left: 4em;
+    width: 100px;
+    height: 100px;
+    margin-top: -7em;
+}
+.signup .signup-field{
+    height: 208px;
+    position: absolute;
+    left: 0;
+}
+input[type='password'], input[type='text'], input[type='email'] {
+    color: #E53A88 !important;
+}
+input[type='text'], input[type='number'] ,input[type='email'], input[type='password']{
+    color: #afb1be;
+    width: 188px;
+    margin-bottom: 1em;
+    background: rgb(50, 54, 74);
+    left: 0;
+    padding: 10px 65px;
+    border-top: 2px solid rgb(57, 61, 82);
+    border-bottom: 2px solid rgb(57, 61, 82);
+    border-right: 1px solid rgb(57, 61, 82);
+    border-left: 1px solid rgb(57, 61, 82);
+    outline: none;
+    border-radius: 12px;
+    font-family: ProximaNovaThin;
+    box-shadow: none;
+}
+.gender h3{
+    margin-top: .2em;
+    color: #afb1be;
+    text-align: center;
+}
+input[type='radio']{
+    display: none;
+}
+.gender label{
+    border: 1px solid grey;
+    padding: .5em;
+    color: #afb1be;
+    cursor: pointer;
+    margin-left: 4em;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+}
+.gender label:focus{
+    outline: none;
+}
+.gender-input label:extend(input){
+    display: inline-block;
+
+    width: 50%;
+    text-align: center;
+    border-radius: 0;
+}
+.gender-input input[type='radio']:checked + label{
+    background-color: #E53A88;
+    color: #fff;
+    border-color: #E53A88;
+}
+.signup-field-user{
+    position: relative;
+}
+.signup-field-password{
+    position: relative;
+}
+.signup-submit{
+    position: relative;
+    top: 35px;
+    left: 3em;
+    width: 80%;
+    right: 0;
+    margin: auto;
+}
+input[type='submit']{
+    border-radius:50px;
+    background:transparent;
+    padding:10px 50px;
+    border:2px solid #E53A88;
+    color: #DC6180 ;
+    text-transform:uppercase;
+    font-size:11px;
+    transition-property:background,color;
+    transition-duration:.2s;
+}
+input[type='submit']:focus{
+    box-shadow: none;
+    outline: none;
+}
+input[type='submit']:hover{
+    color: #fff;
+    background: #E53A88;
+    cursor: pointer;
+    transition-property: background, color;
+    transition-duration: .2s;
+}
+.login{
+    position: absolute;
+    color: rgb(96, 100, 121);
+    margin-left: 5em;
+    top: 32em;
+    font-size: 13px;
+    font-family: ProximaNovaThin;
+}
+.login a{
+    font-style: italic;
+    color: rgb(96, 100, 121);
+}

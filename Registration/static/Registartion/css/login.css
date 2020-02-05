@@ -1,0 +1,135 @@
+@font-face{
+    font-family: "ProximaNovaThin";
+    src: url("../fonts/Proxima Nova Thin.otf");
+}
+@font-face{
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/Proxima Nova Bold.otf");
+}
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 800px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,58,136,1) 0%, rgba(124,33,255,1) 100%);
+    cursor: default;
+}
+.login{
+    opacity: 1;
+    top: 2em;
+    position: relative;
+    width:240px;
+    border-top: 2px solid #D8312A;
+    height:300px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    top:0;
+    bottom:0;
+    padding:100px 40px 40px 40px;
+    background: #35394a;
+}
+.login .login-title span{
+    color: rgb(175, 177, 190);
+    display: block;
+    height: 70px;
+    font-family: ProximaNovaThin;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 16px;
+}
+.login .login-title img{
+    margin-left: 4em;
+    width: 100px;
+    height: 100px;
+    margin-top: -7em;
+}
+.login .login-field{
+    height: 208px;
+    position: absolute;
+    left: 0;
+}
+.login-field .user{
+    position: absolute;
+    z-index: 1;
+    left: 36px;
+    top: 8px;
+    opacity: .5;
+}
+input[type='password'], input[type='text']{
+    color: #E53A88 !important;
+}
+input[type='text'], input[type='password']{
+    color: #afb1be;
+    width: 190px;
+    margin-top: -2px;
+    background: rgb(50, 54, 74);
+    left: 0;
+    padding: 10px 65px;
+    border-top: 2px solid rgb(57, 61, 82);
+    border-bottom: 2px solid rgb(57, 61, 82);
+    border-right: none;
+    border-left: none;
+    outline: none;
+    font-family: ProximaNovaThin;
+    box-shadow: none;
+}
+.login-field-user{
+    position: relative;
+}
+.login-field-password{
+    position: relative;
+}
+.login-field-submit{
+    position: relative;
+    top: 35px;
+    left: 3em;
+    width: 80%;
+    right: 0;
+    margin: auto;
+}
+.forget{
+    position: absolute;
+    top: 160px;
+    margin-left: 8.3em;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.forget a{
+    color: rgb(96, 100, 121);
+}
+input[type='submit']{
+    border-radius:50px;
+    background:transparent;
+    padding:10px 50px;
+    border:2px solid #E53A88;
+    color: #DC6180 ;
+    text-transform:uppercase;
+    font-size:11px;
+    transition-property:background,color;
+    transition-duration:.2s;
+}
+input[type='submit']:focus{
+    box-shadow: none;
+    outline: none;
+}
+input[type='submit']:hover{
+    color: #fff;
+    background: #E53A88;
+    cursor: pointer;
+    transition-property: background, color;
+    transition-duration: .2s;
+}
+.signup{
+    position: absolute;
+    color: rgb(96, 100, 121);
+    margin-left: 5em;
+    top: 13em;
+    font-size: 13px;
+    font-family: ProximaNovaThin;
+}
+.signup a{
+    font-style: italic;
+    color: rgb(96, 100, 121);
+}

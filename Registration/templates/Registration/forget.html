@@ -1,0 +1,39 @@
+{% load static %}
+<a href="/beatxusersignup/">signup</a>
+<a href="/beatxuserlogin/">login</a>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="{%static 'Registartion/css/new.css'%}">
+      <script type="text/javascript" src="{%static 'aa.css'%}">
+
+      </script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="avatar-upload">
+        <div class="avatar-edit">
+          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+          <label for="imageUpload"></label>
+        </div>
+        <div class="avatar-preview">
+          <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick="myFunction()">Click me</button>
+
+    <script>
+    function myFunction() {
+      alert("hello ")
+    }
+    </script>
+   <audio controls rc="">
+
+   </audio>
+   <button id="pipButton" class="hidden" disabled>Enter Picture-in-Picture mode</button>  
+  </body>
+  </html>

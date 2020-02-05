@@ -1,0 +1,17 @@
+{% load static %}
+<!-- Lists of User's Friends -->
+    <div class="container-scroll">
+      {% for friend in allthefriend%}
+    <div class="user-1">
+        <img src="/uploaded/{{friend.profile_pic}}">
+        <h1> {{ friend.username }} </h1>
+        <img class="listen" src="{%static 'BeatXMusic/svg/listen.svg'%}">
+        <a href="#"><img class="chat" src="{%static 'BeatXMusic/svg/chat.svg'%}"></a>
+        <a href="#"><img class="option" src="{%static 'BeatXMusic/svg/option.svg'%}"></a>
+    </div>
+    <br> <br> <br>
+    {% endfor %}
+  </div>
+  </div>
+{% block content %}
+{% endblock %}

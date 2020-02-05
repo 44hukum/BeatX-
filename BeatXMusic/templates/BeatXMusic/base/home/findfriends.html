@@ -1,0 +1,18 @@
+
+{% load static %}
+{% block content %}
+{% endblock %}
+<!-- Middle panel -->
+ <div class="middle-content">
+    <!-- Searching Music -->
+    <div class="search-bar">
+        <form method="GET" action="/beatXmusic/searchfriend/">
+            <input type="text" class="searchTerm" name="searchfriend" placeholder="Search Friend">
+            <label for="search-btn">
+                <img class="search" src="{%static 'BeatXMusic/svg/search.svg'%}" style="width: 20px; height: 20px;">
+            </label>
+            <input id="search-btn" type="submit" name="">
+            <!-- Filter of Search bar -->
+            <a href="#"><img class="filter" src="{%static 'BeatXMusic/svg/controls.svg'%}" style="width: 20px; height: 20px;"></a>
+        </form>
+    </div>

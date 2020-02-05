@@ -1,0 +1,56 @@
+{% load static %}
+{% block content %}
+{% endblock  %}
+    <!-- Name of Searched Song by User -->
+
+     <div class="searched-song">
+         <h1><span></span> .</h1>
+     </div>
+     {% for musicc in musicl %}
+
+
+     <!-- Results of Searched Songs -->
+       {% csrf_token %}
+     <div class="song-title">
+       <a href="/beatXmusic/search/1/{{musicc.0 }}/">
+         <label for="play">
+           <img class="play-btn" src="{%static 'BeatXMusic/svg/play.svg' %}">
+         </label>
+         <img class="cover-art" src="{%static 'BeatXMusic/img/starboy.png'%}">
+
+        </a>
+         <div class="title">
+           <h1> {{musicc.2}} </h1>
+           <p> Uploaded by <a href="#">{{ musicc.1 }}</a></p>
+         </div>
+         <!-- Paxi Use Hai guyzz -->
+        <!-- <p><img class="timer" src="svg/time.svg">3:00</p> -->
+        <label for="ms-py">
+         <img class="music-playlist" src="{%static 'BeatXMusic/svg/music playlists.svg' %}">
+         </label>
+         <button id="ms-py" type="submit"></button>
+        <!-- Favourites Songs -->
+        <!-- Required Form -->
+         <label for="fav">
+            <img class="favourite" src="{%static 'BeatXMusic/svg/favourite.svg' %}">
+         </label>
+         <!-- Downloader -->
+         <button id="fav" type="submit"></button>
+         <a href="/beatXmusic/download/{{musicc.0}}" download>
+         <label>
+             <img class="download" src="{%static 'BeatXMusic/svg/download.svg' %}">
+           </label>
+         <button id="dwnload" type="submit" >
+         </a>
+     </div>
+
+
+   <br> <br> <br> <br> <br> <br>
+   {% endfor %}
+     <script>
+       var x = document.getElementById("BeatXmusicPlayer");
+       function playAudio(){
+         x.play();
+       }
+
+     </script>

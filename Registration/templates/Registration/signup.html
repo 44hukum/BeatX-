@@ -1,0 +1,52 @@
+{% extends 'Registration/base/header.html'%}
+{% block content %}
+{% load static %}
+    <body>
+        <div class="signup">
+            <div class="signup-title">
+                <img src="{%static 'Registartion/img/BeatX Logo.png'%}">
+                <span> Signup </span>
+            </div>
+            <!-- User's Signup fields. All are required! -->
+            <form action="/beatxusersignup/" method="post">
+              {% csrf_token %}
+            <div class="signup-field">
+                <div class="signup-field-email">
+                    <input type="email" name="emailaddr" placeholder="E-Mail" required>
+                    <!-- pattern matching for input wether the input is valid or not required -->
+                </div>
+                <div class="signup-field-user">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="signup-field-number">
+                    <input type="text" name="phone_number" placeholder="Contact No." required>
+                </div>
+                <div class="signup-field-password">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="signup-field-con-password">
+                    <input type="password" name="password2" placeholder="Confirm Password" required>
+                </div>
+                <div class="gender">
+                    <h3> Gender </h3>
+                    <div class="gender-input">
+                        <input type="radio" name="gender" value="male" id="male-gender">
+                        <label for="male-gender">Male</label>
+                        <input type="radio" name="gender" value="female" id="female-gender">
+                        <label for="female-gender" style="margin-left: 10px;">Female</label>
+                        <input type="radio" name="gender" value="Other" id="other-gender">
+                        <label for="other-gender" style="margin-left: 10px">Other</label>
+                    </div>
+                </div>
+                <!-- Signup button directly linked to the Homepage or User Profile -->
+                <div class="signup-submit">
+                    <input type="submit" value="signup">
+                </div>
+              </form>
+                <!-- In case, User already have an account in BeatX -->
+                <div class="login">
+                    <p>Already have an account? <a href="/beatxuserlogin/">Log In </a></p>
+                </div>
+            </div>
+      </body>
+{% endblock %}
