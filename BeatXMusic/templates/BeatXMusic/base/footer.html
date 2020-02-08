@@ -21,7 +21,7 @@
             <button id="prev" type="submit"></button>
             <!-- Play Button for songs -->
             <label for="ply">
-               <img class="plays" id="myImg" src="{%static 'BeatXMusic/svg/pause.png'%}">
+               <img class="plays" id="myImg" src="{%static 'BeatXMusic/svg/plays.svg'%}">
             </label>
             <input id="ply" onclick="togglePlay()" type="submit"></input>
             <!-- Skip button for the next song -->
@@ -57,10 +57,10 @@
    function togglePlay() {
      if (isPlaying) {
        myAudio.pause()
-       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/pause.png'%}";
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/plays.svg'%}";
      } else {
        myAudio.play();
-       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/plays.svg'%}";
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/pause.svg'%}";
      }
    };
    myAudio.onplaying = function() {
