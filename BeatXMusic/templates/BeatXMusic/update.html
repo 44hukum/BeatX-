@@ -1,0 +1,27 @@
+{% load static %}
+{% block content %}
+{% endblock  %}
+<form class="" action="" method="post">
+  {% csrf_token %}
+  <div class="signup-field">
+
+      <div class="signup-field-user">
+          <input type="text" name="username" placeholder="Username" value='{{username}}' >
+      </div>
+      <div class="signup-field-number">
+          <input type="text" name="phone_number" placeholder="Contact No." value="{{number}}">
+      </div>
+      <div class="signup-field-password">
+          <input type="password" name="password" placeholder="Password" value="{{password}}">
+      </div>
+      <div class="signup-field-password">
+          <input type="password" name="password2" placeholder=" confirm Password" value="{{password}}">
+      </div>
+
+
+      <!-- Signup button directly linked to the Homepage or User Profile -->
+    <div class="signup-submit">
+          <input type="submit" value="update">
+      </div>
+
+</form>

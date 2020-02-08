@@ -1,0 +1,33 @@
+{% load static%}
+<!-- loads the header of the BeatXmusic profile -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'BeatXMusic/css/signup.css'%}">
+        <link rel="stylesheet" href="{%static 'BeatXMusic/css/style.css'%}">
+          <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+        <title> BeatX </title>
+    </head>
+    <body>
+        <!-- left panel -->
+        <div class="navigation">
+            <nav>
+                    <ul>
+                        <header>
+                            <img src="{%static 'BeatXMusic/img/BeatX Logo.png'%}">
+                        </header>
+                        <li><a href="/beatXmusic/"><img src="{%static 'BeatXMusic/svg/home.svg'%}"> Home </a></li>
+                        <li><a href="/beatXmusic/playlist/"><img src="{%static 'BeatXMusic/svg/playlists.svg'%}"> Playlists </a></li>
+                        <li><a href="/beatXmusic/localmusic/"><img src="{%static 'BeatXMusic/svg/local music.svg'%}"> Local Music </a></li>
+                        <li><a href="/beatXmusic/findfriends/"><img src="{%static 'BeatXMusic/svg/add friend.svg'%}"> Find Friends </a></li>
+                        <li><a href="/beatXmusic/createPlayList/"><img src="{%static 'BeatXMusic/svg/create playlists.svg'%}"> Create Playlists </a></li>
+                    </ul>
+            </nav>
+        </div>
+
+
+{% block content %}
+{% endblock %}

@@ -1,0 +1,65 @@
+{% load static %}
+{% block content %}
+{% endblock %}
+
+{% if users %}
+{% for u in users%}
+{% if u.username == nottofind %}
+{% else %}
+<!-- when the user have no friends  -->
+{%if meto == 1 %}
+
+  {% csrf_token %}
+<div class="searched-friends">
+    <a href="#"><img class="khaled" src="/uploaded/{{u.profile_pic}}"><div class="searched-usename"><h1>{{u.username}}</h1></div></a>
+    <!-- Bio Of User Here -->
+
+    <!-- Add Friend -->
+    <a href="{{ u.id }}">
+    <label for="add-frnd">
+        <img class="add-friend" src="{%static 'BeatXMusic/svg/addfriends.svg'%}">
+    </label>
+    <!-- <input id="add-frnd" onclick="click()" type="submit"></input> -->
+    </a>
+    <!-- Option Button -->
+    <!-- <label for="optin">
+        <img class="optn" src="{%static 'BeatXMusic/svg/option.svg'%}">
+    </label>
+    <button id="optin" type="submit"></button> -->
+
+</div>
+
+{%else%}
+          {% for data in meto%}
+          {% if data == u.id %}
+          <form class="" action="{{u.id}}/" method="post">
+            {% csrf_token %}
+          <div class="searched-friends">
+              <a href="#"><img class="khaled" src="/uploaded/{{u.profile_pic}}"><div class="searched-usename"><h1>{{u.username}}</h1></div></a>
+              <!-- Bio Of User Here -->
+
+              <!-- Add Friend -->
+              <label for="add-frnd">
+                  <img class="add-friend" src="{%static 'BeatXMusic/svg/addfriends.svg'%}">
+              </label>
+              <input id="add-frnd" onclick="click()" type="submit"></input> {{msg}}
+              <!-- Option Button -->
+              <!-- <label for="optin">
+                  <img class="optn" src="{%static 'BeatXMusic/svg/option.svg'%}">
+              </label>
+              <button id="optin" type="submit"></button> -->
+
+          </div>
+          </form>
+          {% else %}
+          {% endif %}
+          {% endfor %}
+  {% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+ <script>
+    function click(){
+      alert("hello")
+    }
+</script>

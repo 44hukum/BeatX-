@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Play" transform="translate(-362 -363)">
+    <path id="Triangle" d="M19.765,12.385a.479.479,0,0,1,0,.825l-19,11.513A.5.5,0,0,1,0,24.311V1.285A.5.5,0,0,1,.762.872Z" transform="translate(377 375.2)" fill="#fff"/>
+    <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(362 363)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="25" cy="25" r="25" stroke="none"/>
+      <circle cx="25" cy="25" r="24.5" fill="none"/>
+    </g>
+  </g>
+</svg>

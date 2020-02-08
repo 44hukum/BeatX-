@@ -1,0 +1,31 @@
+{% load static %}
+{% block content %}
+{% endblock %}
+<div class="main-content">
+    <!-- Uploading Local Music -->
+     <div class="upload-music">
+         <form method="post" action="" enctype="multipart/form-data">
+           {% csrf_token  %}
+           <label for="file-input">
+             <img src="{%static 'BeatXMusic/svg/upload.svg'%}">
+           </label>
+           <input id="file-input" type="file" name="userssongs"accept="audio/*">
+           <button type="submit" id="uploadMusic" onclick="func()"></button>
+         </form>
+         <h1> Upload Music </h1>
+         <script>
+
+             $(document).ready(function(){
+                 $('#file-input').change(function(e){
+                     var fileName = e.target.files[0].name;
+                     // display the input to the user to confirm the upload
+                      var abc=fileName
+                     if (confirm("upload the music: "+abc)) {
+                         document.getElementById("uploadMusic").click()
+                      } else {
+
+                      }
+                 });
+
+             });
+                     </script>

@@ -1,0 +1,73 @@
+{% load static %}
+{% block content %}
+{% endblock %}
+<footer>
+
+
+    <div class="audio-player" >
+      <audio  id="BeatXmusicPlayer">
+          <source src="/uploaded/{{music}}" type="audio/mpeg">
+      </audio>
+        <div class="players">
+            <!-- Shuffle the music from the current playlists -->
+            <label for="shfle">
+                <img class="shuffle" src="{%static 'BeatXMusic/svg/shuffle.svg'%}" >
+            </label>
+            <button id="shfle" type="submit"></button>
+            <!-- Previous Song Button (Backward Skip) -->
+            <label for="prev">
+                <img class="previous"  src="{%static 'BeatXMusic/svg/previous.svg'%}">
+            </label>
+            <button id="prev" type="submit"></button>
+            <!-- Play Button for songs -->
+            <label for="ply">
+               <img class="plays" id="myImg" src="{%static 'BeatXMusic/svg/pause.png'%}">
+            </label>
+            <input id="ply" onclick="togglePlay()" type="submit"></input>
+            <!-- Skip button for the next song -->
+
+            <label for="skp">
+                <img class="skip" src="{%static 'BeatXMusic/svg/skip.svg'%}">
+            </label>
+            <button id="skp" type="submit"> </button>
+            <!-- Repeat Button for songs which will repeat the current song -->
+            <label for="rep">
+                <img class="repeat" src="{%static 'BeatXMusic/svg/repeat.svg'%}" >
+            </label>
+            <button id="rep" type="submit"></button>
+        </div>
+        <div class="login-button">
+          <form action="{%url 'Registration:logout'%}">
+            <button type="submit" id="logout-btn"> Log Out </button>
+          </form>
+        </div>
+        </div>
+</footer>
+<script>
+  var myAudio = document.getElementById("BeatXmusicPlayer");
+  function hello(){
+    alert("hello")
+  }
+   $(document).ready(function(){
+    document.getElementById("myAudio").click();
+   });
+
+   var isPlaying = false;
+
+   function togglePlay() {
+     if (isPlaying) {
+       myAudio.pause()
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/pause.png'%}";
+     } else {
+       myAudio.play();
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/plays.svg'%}";
+     }
+   };
+   myAudio.onplaying = function() {
+     isPlaying = true;
+   };
+   myAudio.onpause = function() {
+     isPlaying = false;
+   };
+
+</script>

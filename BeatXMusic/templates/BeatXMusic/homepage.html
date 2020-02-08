@@ -1,0 +1,31 @@
+{% extends 'BeatXMusic/base/header.html'%}
+{% block content %}
+{% load static %}
+        <!-- right panel -->
+{%if beatbeat == 1%}
+{% else %}
+      {% include 'BeatXMusic/base/profilearea.html'%}
+      {% include 'BeatXMusic/base/home/friendlist.html'%}
+      {% include 'BeatXMusic/base/leftpane.html'%}
+
+
+                  <!-- Middle panel -->
+            <!-- Whole Content of BeatX homepage -->
+                 <!-- if logic to change th content in this area -->
+      <!-- if the user search the music  -->
+                 {% if aa %}
+                 {% include 'BeatXMusic/base/search.html'%}
+                 {% include 'BeatXMusic/base/home/searched.html'%}
+
+                <!-- when the user search for the friends  -->
+                {% elif friends%}
+                {% include 'BeatXMusic/base/home/findfriends.html'%}
+                {% include 'BeatXMusic/base/home/friends.html'%}
+               <!-- when the user search for the friends  -->
+                 {% else  %}
+                 {% include 'BeatXMusic/base/search.html'%}
+                 {% include 'BeatXMusic/base/home/homepage.html'%}
+                 {% endif %}
+                {% include 'BeatXMusic/base/footer.html' %}
+    {% endif %}
+    {% endblock %}

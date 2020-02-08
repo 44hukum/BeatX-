@@ -1,0 +1,1583 @@
+@font-face{
+    font-family: "ProximaNovaThin";
+    src: url("../fonts/Proxima Nova Thin.otf");
+}
+@font-face{
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/Proxima Nova Bold.otf");
+}
+body{
+    background-color: #0D0D0D;
+
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+*a{
+  text-decoration: none;
+}
+header img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+/* up.html upload content for upload button */
+   .upload-file{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+   }
+   .buttt{
+       background-color: white ;
+   }
+   .upload-file input[type=file]{
+       position: absolute;
+   }
+/* end */
+#uploadprofilepicBeatX{
+  display: none;
+}
+#uploadMusic{
+  display: none;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 20%;
+    text-align: justify;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: #000000;
+}
+nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-family: ProximaNovaBold;
+    font-size: x-large;
+    display: block;
+    position: relative;
+    margin: .7em;
+    padding: 8px 16px;
+    transition: .2s;
+    z-index: 1;
+}
+nav ul li a:hover{
+    background-color: #2E2D2D;
+    transform: scale(1.1);
+}
+nav ul li a img{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.middle-content{
+    text-align: center;
+    margin-left: 220px;
+    margin-right: 215px;
+    padding-bottom:  204px;
+
+  }
+.search-bar {
+    display: block;
+    width: 100%;
+}
+ #search-btn{
+    display: none;
+}
+#profileupload{
+  display: none;
+}
+#file-input{
+  display: none;
+}
+.searchTerm {
+    width: 25%;
+    margin-top: 30px;
+    border: 2px solid #2E2D2D;
+    border-radius: 10px;
+    padding: 10px;
+    height: 20px;
+    font-family: ProximaNovaThin;
+    font-size: medium;
+    letter-spacing: 3px;
+    outline: none;
+    background-color: #2E2D2D;
+    color: #FFF;
+}
+
+
+.searchTerm:focus{
+    color: #FFF;
+}
+.search{
+    position: relative;
+    top: 42px;
+    float: right;
+    right: 430px;
+    opacity: 60%;
+    transition: 0.5s;
+}
+.search:hover{
+    opacity: 100%;
+}
+
+.user-content{
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    text-align: justify;
+    height: 100%;
+    position: fixed;
+    float: right;
+    right: 0;
+    background-color: #000000;
+    overflow: scroll;
+
+}
+.user-content::-webkit-scrollbar {
+  display: none;
+}
+
+.filter{
+    position: relative;
+    top: 2.5em;
+    float: right;
+    right: 21em;
+    opacity: 60%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.filter:hover{
+    opacity: 100%;
+}
+#filters{
+    display: none;
+}
+
+.user-profile img{
+  width: 62px;
+    height: 70px;
+    margin-left: 1em;
+    margin-top: 1em;
+    border-radius: 50%;
+
+}
+.user-profile .info{
+    position: absolute;
+    overflow: hidden;
+    right: 9%;
+    height: 70px;
+    bottom: 0;
+    top: 1.5em;
+}
+.user-profile .info a img{
+    margin-left: 0;
+    width:
+}
+.user-profile .info h1{
+    color: #FFF;
+    font-family: ProximaNovaBold;
+    font-size: 20px;
+    text-align: center;
+    margin:0;
+}
+.user-profile .info a{
+    color: #FFF;
+    text-align: center;
+    font-family: ProximaNovaThin;
+    text-decoration: none;
+    font-size: medium;
+    opacity: 60%;
+    margin-left: 23%;
+    transition: 0.4s;
+}
+.user-profile a:hover{
+    opacity: 100%;
+}
+.container-scroll{
+  padding-bottom: 45%;
+
+}
+.upload-music{
+    margin-top: 9%;
+}
+.upload-music>input{
+    display: none;
+}
+.upload-music img{
+    width: 300px;
+    height: 300px;
+    opacity: 100%;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+    animation: spin 5s linear infinite;
+    animation-play-state: paused;
+}
+.upload-music img:hover{
+    opacity: 600%;
+    animation-play-state: paused;
+}
+.upload-music img:active{
+    transform: scale(0.8);
+}
+@keyframes spin{
+    100%{transform: rotate(2turn);}
+}
+.upload-music h1{
+    color: #FFF;
+    font-family: ProximaNovaBold;
+    font-size: 20px;
+}
+.user-info{
+    width: 300px;
+    margin-left: 2em;
+}
+.user-info img{
+  width: 100px;
+      height: 100px;
+      margin-top: 1em;
+      border-radius: 51%;
+  }
+.user-info .username h1{
+    text-align: center;
+    color: #FFF;
+    font-size: 25px;
+    font-family: ProximaNovaBold;
+    margin: 0;
+}
+.user-info .username p{
+    color: #FFF;
+    font-family: ProximaNovaThin;
+    font-size: medium;
+    font-style: italic;
+    margin: 0;
+    width: 100px;
+    margin-left: 23%;
+}
+.user-info .username{
+    position: absolute;
+    overflow: hidden;
+    left: 29em;
+    top: 2.5em;
+    bottom: 0;
+    height: 19%;
+}
+.user-friends{
+    width: 200px;
+    margin-left: 24em;
+}
+.user-friends a{
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    font-family: ProximaNovaBold;
+    font-size: 13px;
+    overflow: hidden;
+    position: absolute;
+}
+.user-friends a h1{
+    margin: 0;
+    margin-top: 1em;
+}
+.user-friends a h2{
+    margin: 0;
+}
+.edit-profile{
+    margin-top: 2em;
+    text-align: center;
+    margin-right: 4em;
+}
+.edit-profile a{
+    color: #FFF;
+    text-decoration: none;
+    font-family: ProximaNovaBold;
+    font-size: 20px;
+    padding: 12px;
+    border: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,58,136,1) 0%, rgba(124,33,255,1) 100%);
+    border-radius: 10px;
+}
+.user-bio{
+    margin-top: 8em;
+    margin-right: 4em;
+}
+.user-bio p{
+    color: #FFF;
+    font-family: ProximaNovaThin;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.searched-song h1{
+    color: #FFF;
+    text-align: left;
+    font-family: ProximaNovaBold;
+    font-size: x-large;
+    margin-top: 3em;
+}
+.song-title{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 3em;
+    margin-top: 3em;
+
+}
+.song-title a{
+    color: #FFF;
+    text-decoration: none;
+    font-style: italic;
+    font-family: ProximaNovaThin;
+    font-size: 13px;
+}
+.song-title h1{
+    color: #FFF;
+    font-family: ProximaNovaBold;
+    font-size: 20px;
+    margin: 0;
+}
+.song-title p{
+    color: #FFF;
+    font-family: ProximaNovaThin;
+    font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+}
+.song-title img{
+    width: 40px;
+    height: 40px;
+}
+.song-title .play-btn{
+    margin-left: 10em;
+    cursor: pointer;
+    transition: .2s;
+}
+.play-btn:active{
+    transform: scale(0.9);
+}
+#play{
+    display: none;
+}
+.song-title .cover-art{
+    margin-left: 4em;
+}
+.song-title .music-playlist{
+    margin-left: 25em;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+.music-playlist:active{
+    transform: scale(0.9);
+}
+#ms-py{
+    display: none;
+}
+.song-title .favourite{
+    margin-left: 2em;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.favourite:active{
+    transform: scale(0.9);
+}
+.song-title .download{
+    margin-left: 2em;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+.download:active{
+    transform: scale(0.8);
+}
+#dwnload{
+    display: none;
+}
+#fav{
+    display: none;
+}
+.title{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 20em;
+    width: 300px;
+    right: 3.4em;
+    text-align: justify;
+}
+.friend-list{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    margin-top: 2em;
+}
+.friend-list img{
+    width: 25px;
+    height: 25px;
+    margin-top: 1.2em;
+    margin-left: 2em;
+}
+.friend-list h1{
+  color: #FFF;
+    text-align: center;
+    font-family: ProximaNovaBold;
+    font-size: 23px;
+    margin-left: -0.5em;
+    margin-top: 6%;
+}
+
+.friends{
+    margin-top: 1.3em;
+}
+.user-1{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+}
+
+.user-1 img{
+    width: 40px;
+    height: 40px;
+    margin-left: 2em;
+}
+.user-1 h1{
+  color: #FFF;
+text-align: center;
+font-family: ProximaNovaThin;
+font-size: 16px;
+margin-left: -0.5em
+overflow:hidden;
+}
+.user-1 .listen{
+  width: 20px;
+height: 20px;
+margin-top: 0.7em;
+margin-left: -1em;
+cursor: pointer;
+transition: .2s;
+}
+.user-1{
+
+  float: right;
+margin-left: -8%;
+}
+.listen:active{
+    transform: scale(0.9);
+}
+#listenn{
+    display: none;
+}
+.user-1 .chat{
+    width: 20px;
+    height: 20px;
+    margin-top: .7em;
+    margin-left: 1.3em;
+    cursor: pointer;
+    transition: .2s;
+}
+.chat:active{
+    transform: scale(0.9);
+}
+#chatt{
+    display: none;
+}
+.user-1 .option{
+    width: 20px;
+    height: 20px;
+    margin-top: .7em;
+    margin-left: 1.3em;
+    cursor: pointer;
+}
+#opt{
+    display: none;
+}
+.log-out{
+    margin-top: 30em;
+}
+#logout-btn{
+  float: right;
+      color: #ffffff;
+    font-family: ProximaNovaBold;
+    font-size: 20px;
+    border: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,58,136,1) 0%, rgba(124,33,255,1) 100%);
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 2%;
+
+}
+.horizontal-line{
+    margin-top: 6em;
+}
+hr{
+    border: 1px solid #FFF;
+    opacity: 40%;
+}
+.main-contents{
+    position: absolute;
+    overflow: hidden;
+    margin-top: 5em;
+    padding-bottom:  204px;
+}
+.user-name h1{
+    color: #FFF;
+    font-family: ProximaNovaBold;
+    font-size: 25px;
+    float: left;
+    margin-left: 7em;
+}
+.searched-friends{
+    display: flex;
+    margin-top: 7%;
+}
+.searched-friends a{
+    text-decoration: none;
+    display: flex;
+}
+.searched-friends img{
+  width: 70px;
+  height: 80px;
+  margin-left: 10em;
+   border-radius: 50%;
+}
+}
+
+
+.searched-friends h2{
+    color: #FFF;
+    font-size: 16px;
+    font-family: ProximaNovaThin;
+    font-style: italic;
+    height: 25px;
+}
+.searched-friends>.searched-usename,h1{
+  padding-left: 2em;
+  padding-right: 3em;
+}
+
+
+.searched-friends .add-friend{
+  width: 30px;
+    height: 30px;
+    margin-top: 1.5em;
+    cursor: pointer;
+    transition: .2s;
+    margin-left: 3em;
+    padding-right: 3em;
+}
+.add-friend:active{
+    transform: scale(0.9);
+}
+#add-frnd{
+    display: none;
+}
+.searched-friends .optn{
+    width: 25px;
+    height: 25px;
+    margin-left: 5em;
+    margin-top: 1.8em;
+    cursor: pointer;
+}
+#optin{
+    display: none;
+}
+.audio-player{
+    width: 100%;
+    bottom: 0em;
+    left: 0;
+    right: 30;
+    height: 15%;
+    position: fixed;
+    opacity: 5;
+    background-color: black;
+}
+.players{
+  width: 50%;
+  float: left;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.players .shuffle{
+    width: 20px;
+    height: 20px;
+    margin-right: 2em;
+    margin-bottom: .7em;
+    cursor: pointer;
+}
+#shfle{
+    display: none;
+}
+.players .previous{
+    width: 20px;
+    height: 20px;
+    margin-bottom: .7em;
+    margin-right: 2em;
+    cursor: pointer;
+}
+#prev{
+    display: none;
+}
+.players .plays{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#ply{
+    display: none;
+}
+.players .skip{
+    width: 20px;
+    height: 20px;
+    margin-left: 2em;
+    margin-bottom: .7em;
+    cursor: pointer;
+}
+#skp{
+    display: none;
+}
+.players .repeat{
+    width: 20px;
+    height: 20px;
+    margin-left: 2em;
+    margin-bottom: .7em;
+    cursor: pointer;
+}
+#rep{
+    display: none;
+}
+/*
+  Device = Desktops
+  Screen = 1281px to higher resolution desktops
+*/
+/*@media screen and (min-width: 1281px) and (max-width: 1600px) {
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 50px;
+        margin-left: 60px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 50px;
+        height: 50px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 1em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 20px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: medium;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+}*/
+/*
+  Device = Laptops, Desktops
+  Screen = B/w 1025px to 1280px
+*/
+@media screen and (min-width: 1025px) and (max-width: 1300px){
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 140px;
+        height: 140px;
+        margin-bottom: 40px;
+        margin-left: 25px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        display: block;
+        padding: 0 auto;
+    }
+    .middle-content{
+        text-align: center;
+        margin-left: 220px;
+        margin-right: 0;
+        width: 777px;
+         padding-bottom: 204px;
+    }
+    .search-bar {
+        display: block;
+        width: 100%;
+        position: fixed;
+    }
+
+    .searchTerm {
+        width: 25%;
+        margin-top: 30px;
+        border: 2px solid #2E2D2D;
+        border-radius: 10px;
+        padding: 10px;
+        height: 20px;
+        font-size: medium;
+        letter-spacing: 3px;
+        outline: none;
+    }
+
+    .searchTerm:focus{
+        color: #FFF;
+    }
+    .search{
+        position: relative;
+        top: 42px;
+        float: right;
+        right: 340px;
+        opacity: 60%;
+    }
+    .filter{
+        position: relative;
+        top: 2.5em;
+        float: right;
+        right: 15em;
+        opacity: 60%;
+    }
+    .upload-music{
+        margin-top: 10em;
+    }
+    .main-content .upload-music a img{
+        width: 300px;
+        height: 300px;
+
+    }
+    .upload-music h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 20px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 50px;
+        height: 50px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 1em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 20px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: medium;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+    .friend-list{
+        display: flex;
+        overflow: hidden;
+        margin-top: 2em;
+    }
+    .friend-list img{
+        width: 25px;
+        height: 25px;
+        margin-top: .8em;
+        margin-left: 2em;
+    }
+    .friend-list h1{
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        margin-left: 1.5em;
+    }
+    .friends{
+        margin-top: 1.3em;
+    }
+    .user-1{
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+    }
+    .user-1 img{
+        width: 30px;
+        height: 30px;
+        margin-left: 2em;
+    }
+    .user-1 h1{
+      color: #FFF;
+text-align: center;
+font-family: ProximaNovaThin;
+font-size: 12px;
+margin-left: -0.5em
+    }
+    .user-1 .listen{
+        width: 15px;
+        height: 15px;
+        margin-top: .7em;
+        margin-left: 1em;
+    }
+    .user-1 .chat{
+        width: 15px;
+        height: 15px;
+        margin-top: .7em;
+        margin-left: 1.3em;
+    }
+    .user-1 .option{
+        width: 15px;
+        height: 15px;
+        margin-top: .7em;
+        margin-left: 1.3em;
+    }
+    .log-out{
+        margin-top: 35em;
+    }
+    .log-out a{
+        text-decoration: none;
+        color: #FFF;
+        cursor: pointer;
+        font-family: ProximaNovaBold;
+        font-size: 18px;
+        border: 0;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,58,136,1) 0%, rgba(124,33,255,1) 100%);
+        border-radius: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        margin-left: 4em;
+    }
+}
+/*
+  Device = Tablets, Ipads (portrait)
+  Screen = B/w 768px to 1024px
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+    nav ul li a{
+        font-size: x-small;
+        display: block;
+        padding: 0 auto;
+    }
+    .search-bar {
+        display: block;
+        width: 100%;
+    }
+
+    .searchTerm {
+        width: 32%;
+        margin-top: 30px;
+        border: 2px solid #2E2D2D;
+        border-radius: 10px;
+        padding: 10px;
+        height: 20px;
+        font-size: medium;
+        letter-spacing: 3px;
+        outline: none;
+    }
+
+    .searchTerm:focus{
+        color: #FFF;
+    }
+    .search{
+        position: relative;
+        top: 42px;
+        float: right;
+        right: 200px;
+        opacity: 60%;
+    }
+    .filter{
+        position: relative;
+        top: 2.5em;
+        float: right;
+        margin-right: -13em;
+        opacity: 60%;
+    }
+    .upload-music{
+        margin-top: 10em;
+    }
+    .main-content .upload-music a img{
+        width: 300px;
+        height: 300px;
+
+    }
+    .upload-music h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 20px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 40px;
+        height: 40px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 1em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 13px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: 10px;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+    .friend-list{
+        display: flex;
+        overflow: hidden;
+        margin-top: 2em;
+    }
+    .friend-list img{
+        width: 20px;
+        height: 20px;
+        margin-top: .6em;
+        margin-left: 2em;
+    }
+    .friend-list h1{
+        color: #FFF;
+        text-align: center;
+        font-size: 13px;
+        margin-left: 1.5em;
+    }
+    .friends{
+        margin-top: 1em;
+    }
+    .user-1{
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+    }
+    .user-1 img{
+        width: 20px;
+        height: 20px;
+        margin-top: .6em;
+        margin-left: 1em;
+    }
+    .user-1 h1{
+      color: #FFF;
+text-align: center;
+font-family: ProximaNovaThin;
+font-size: 12px;
+margin-left: -0.5em
+    }
+    .user-1 .listen{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: .8em;
+    }
+    .user-1 .chat{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: 1.1em;
+    }
+    .user-1 .option{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: 1.1em;
+    }
+    .log-out{
+        margin-top: 35em;
+    }
+    .log-out a{
+        color: #FFF;
+        cursor: pointer;
+        font-size: 20px;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        margin-left: 2em;
+    }
+}
+/*
+  Device = Tablets, Ipads (landscape)
+  Screen = B/w 768px to 1024px
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+        margin-left: 35px;
+    }
+    nav ul li a{
+        font-size: 12px;
+        display: block;
+        padding: 0 auto;
+    }
+    .search-bar {
+        display: block;
+        width: 100%;
+    }
+
+    .searchTerm {
+        width: 35%;
+        margin-top: 30px;
+        border: 2px solid #2E2D2D;
+        border-radius: 10px;
+        padding: 10px;
+        height: 20px;
+        font-size: medium;
+        letter-spacing: 3px;
+        outline: none;
+    }
+
+    .searchTerm:focus{
+        color: #FFF;
+    }
+    .search{
+        position: relative;
+        top: 42px;
+        float: right;
+        right: 200px;
+        opacity: 60%;
+    }
+    .filter{
+        position: relative;
+        top: 2.5em;
+        float: right;
+        margin-right: -13em;
+        opacity: 60%;
+    }
+    .upload-music{
+        margin-top: 10em;
+    }
+    .main-content .upload-music a img{
+        width: 300px;
+        height: 300px;
+
+    }
+    .upload-music h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 20px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 45px;
+        height: 45px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 1em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 15px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: 13px;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+    .friend-list{
+        display: flex;
+        overflow: hidden;
+        margin-top: 2em;
+    }
+    .friend-list img{
+        width: 20px;
+        height: 20px;
+        margin-top: .5em;
+        margin-left: 2em;
+    }
+    .friend-list h1{
+        color: #FFF;
+        text-align: center;
+        font-size: 13px;
+        margin-left: 1.5em;
+    }
+    .friends{
+        margin-top: 1em;
+    }
+    .user-1{
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+    }
+    .user-1 img{
+        width: 20px;
+        height: 20px;
+        margin-top: .6em;
+        margin-left: 1em;
+    }
+    .user-1 h1{
+      color: #FFF;
+text-align: center;
+font-family: ProximaNovaThin;
+font-size: 12px;
+margin-left: -0.5em
+    }
+    .user-1 .listen{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: .8em;
+    }
+    .user-1 .chat{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: 1.1em;
+    }
+    .user-1 .option{
+        width: 10px;
+        height: 10px;
+        margin-top: .7em;
+        margin-left: 1.1em;
+    }
+    .log-out{
+        margin-top: 35em;
+    }
+    .log-out a{
+        color: #FFF;
+        cursor: pointer;
+        font-size: 20px;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        margin-left: 2em;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 767px){
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 40px;
+        margin-left: 30px;
+    }
+    nav ul li a{
+        font-size: 8px;
+        display: block;
+        padding: 0 auto;
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+    }
+
+    .searchTerm {
+        width: 100%;
+        margin-top: 30px;
+        border: 2px solid #2E2D2D;
+        border-radius: 10px;
+        padding: 10px;
+        height: 20px;
+        font-size: x-small;
+        letter-spacing: 3px;
+        outline: none;
+    }
+
+    .searchTerm:focus{
+        color: #FFF;
+    }
+    .search{
+        position: absolute;
+        top: 49px;
+        float: right;
+        right: 200px;
+        opacity: 60%;
+    }
+    .filter{
+        position: absolute;
+        top: 3em;
+        float: right;
+        margin-right: -12em;
+        opacity: 60%;
+    }
+    .upload-music{
+        margin-top: 10em;
+        align-content: center;
+    }
+    .main-content .upload-music a img{
+        width: 100px;
+        height: 100px;
+    }
+    .upload-music h1{
+        font-size: 16px;
+        margin-left: 25px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 30px;
+        height: 30px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 3em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 13px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: 10px;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+    .friend-list{
+        display: flex;
+        overflow: hidden;
+        margin-top: 3em;
+    }
+    .friend-list img{
+        width: 15px;
+        height: 15px;
+        margin-top: .5em;
+        margin-left: 2em;
+    }
+    .friend-list h1{
+        color: #FFF;
+        text-align: center;
+        font-size: 11px;
+        margin-left: 1.5em;
+    }
+    .friends{
+        margin-top: .5em;
+    }
+    .user-1{
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+    }
+    .user-1 img{
+        width: 15px;
+        height: 15px;
+        margin-top: .5em;
+        margin-left: .8em;
+    }
+    .user-1 h1{
+      color: #FFF;
+text-align: center;
+font-family: ProximaNovaThin;
+font-size: 12px;
+margin-left: -0.5em
+    }
+    .user-1 .listen{
+        width: 10px;
+        height: 10px;
+        margin-top: .5em;
+        margin-left: .8em;
+    }
+    .user-1 .chat{
+        width: 10px;
+        height: 10px;
+        margin-top: .6em;
+        margin-left: .9em;
+    }
+    .user-1 .option{
+        width: 10px;
+        height: 10px;
+        margin-top: .6em;
+        margin-left: .9em;
+    }
+    .log-out{
+        margin-top: 35em;
+    }
+    .log-out a{
+        color: #FFF;
+        cursor: pointer;
+        font-size: 10px;
+        border: 0;
+        border-radius: 10px;
+        padding: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+        margin-left: 2em;
+    }
+}
+/*
+  Device = Most of the Smartphones Mobiles (Portrait)
+  Screen = B/w 320px to 479px
+*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    nav ul{
+        position: fixed;
+        overflow: auto;
+        text-align: justify;
+        margin: 0 auto;
+        width: 20%;
+    }
+    header img{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+    nav ul li a{
+        font-size: 8px;
+        display: block;
+        padding: 0 auto;
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+    }
+
+    .searchTerm {
+        width: 100%;
+        margin-right: 5em;
+        margin-top: 30px;
+        border: 2px solid #2E2D2D;
+        border-radius: 10px;
+        padding: 10px;
+        height: 20px;
+        font-size: x-small;
+        letter-spacing: 3px;
+        outline: none;
+    }
+
+    .searchTerm:focus{
+        color: #FFF;
+    }
+    .search{
+        position: absolute;
+        top: 49px;
+        float: right;
+        right: 200px;
+        opacity: 60%;
+    }
+    .filter{
+        position: absolute;
+        top: 3em;
+        float: right;
+        margin-right: -12em;
+        opacity: 60%;
+    }
+    .upload-music{
+        margin-top: 10em;
+        align-content: center;
+    }
+    .main-content .upload-music a img{
+        width: 50px;
+        height: 50px;
+    }
+    .upload-music h1{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .user-content{
+        position: fixed;
+        overflow: auto;
+        width: 20%;
+        height: 100%;
+    }
+    .user-profile img{
+        width: 20px;
+        height: 20px;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+    .user-profile .info{
+        position: absolute;
+        overflow: hidden;
+        right: 1em;
+        bottom: 0;
+        top: 2.5em;
+    }
+    .user-profile .info a img{
+        margin-left: 0;
+    }
+    .user-profile .info h1{
+        color: #FFF;
+        font-family: ProximaNovaBold;
+        font-size: 10px;
+        text-align: center;
+        margin:0;
+    }
+    .user-profile .info a{
+        color: #FFF;
+        text-align: center;
+        font-size: 7px;
+        opacity: 60%;
+        margin-left: .5em;
+    }
+    .friend-list{
+        display: flex;
+        overflow: hidden;
+        margin-top: 3em;
+    }
+    .friend-list img{
+        width: 10px;
+        height: 10px;
+        margin-top: .8em;
+        margin-left: 1em;
+    }
+    .friend-list h1{
+        color: #FFF;
+        text-align: center;
+        font-size: 10px;
+        margin-top: 1em;
+        margin-left: 1.5em;
+    }
+    .log-out{
+        margin-top: 35em;
+    }
+    .log-out a{
+        color: #FFF;
+        cursor: pointer;
+        font-size: 10px;
+        border: 0;
+        border-radius: 10px;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+        margin-left: 1em;
+    }
+}

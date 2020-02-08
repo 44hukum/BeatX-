@@ -19,8 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('beatXmusic/',include('BeatXMusic.urls')),
     path('',include('Registration.urls')),
+    path('beatXmusic/',include('BeatXMusic.urls')),
+    path('',include('RestApi.urls')),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
