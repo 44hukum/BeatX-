@@ -111,6 +111,7 @@ nav ul li a img{
     color: #FFF;
 }
 
+
 .searchTerm:focus{
     color: #FFF;
 }
@@ -216,7 +217,7 @@ nav ul li a img{
     cursor: pointer;
     transition: 0.5s all ease-in-out;
     animation: spin 5s linear infinite;
-    animation-play-state: runnig;
+    animation-play-state: paused;
 }
 .upload-music img:hover{
     opacity: 600%;

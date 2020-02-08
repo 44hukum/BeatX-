@@ -39,7 +39,7 @@ class MusicMeta:
          #for artist
          artist=songdata.artist
          if artist == None:
-             artist="None"
+             artist="unknown"
          if title == None:
-             title="None"
+             title="unknown"
          return description,user,duration,artist,title

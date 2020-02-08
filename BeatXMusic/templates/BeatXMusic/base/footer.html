@@ -5,10 +5,8 @@
 
 
     <div class="audio-player" >
-      <audio  id="BeatXmusicPlayer" controls>
-
+      <audio  id="BeatXmusicPlayer">
           <source src="/uploaded/{{music}}" type="audio/mpeg">
-
       </audio>
         <div class="players">
             <!-- Shuffle the music from the current playlists -->
@@ -18,14 +16,14 @@
             <button id="shfle" type="submit"></button>
             <!-- Previous Song Button (Backward Skip) -->
             <label for="prev">
-                <img class="previous" src="{%static 'BeatXMusic/svg/previous.svg'%}">
+                <img class="previous"  src="{%static 'BeatXMusic/svg/previous.svg'%}">
             </label>
             <button id="prev" type="submit"></button>
             <!-- Play Button for songs -->
             <label for="ply">
-               <img class="plays" src="{%static 'BeatXMusic/svg/plays.svg'%}">
+               <img class="plays" id="myImg" src="{%static 'BeatXMusic/svg/pause.png'%}">
             </label>
-            <input id="ply" onclick="playAudio()" type="submit"></input>
+            <input id="ply" onclick="togglePlay()" type="submit"></input>
             <!-- Skip button for the next song -->
 
             <label for="skp">
@@ -46,16 +44,30 @@
         </div>
 </footer>
 <script>
-  var x = document.getElementById("BeatXmusicPlayer");
-  function playAudio(){
-    x.play();
-  }
+  var myAudio = document.getElementById("BeatXmusicPlayer");
   function hello(){
     alert("hello")
   }
-   // $(document).ready(function(){
-   //  document.getElementById("ply").click();
-   // });
+   $(document).ready(function(){
+    document.getElementById("myAudio").click();
+   });
 
+   var isPlaying = false;
+
+   function togglePlay() {
+     if (isPlaying) {
+       myAudio.pause()
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/pause.png'%}";
+     } else {
+       myAudio.play();
+       document.getElementById("myImg").src ="{%static 'BeatXMusic/svg/plays.svg'%}";
+     }
+   };
+   myAudio.onplaying = function() {
+     isPlaying = true;
+   };
+   myAudio.onpause = function() {
+     isPlaying = false;
+   };
 
 </script>

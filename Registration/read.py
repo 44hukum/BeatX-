@@ -8,8 +8,11 @@ class BeatXUsers:
         obj=Registration.register.all()
         return obj
     def userProfile(self,req):
-        obj=Registration.register.get(username=req)
-        return obj
+        try:
+            obj=Registration.register.get(username=req)
+            return obj
+        except:
+            return False
     def prof(self,req):
         obj=Registration.register.get(id=req)
         return obj

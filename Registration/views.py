@@ -46,14 +46,14 @@ def signup(request):
              auth=beat_user_authentication()
              #if the user passes the validation process it calls the create
              #module to create the user account
-             a=auth.validator(user,email,phone,gender,passw)
-             if a[0]: #if the user creation is successfull
-                request.session['beatX_user']=a[1]
+             userrAuth=auth.validator(user,email,phone,gender,passw)
+             if userrAuth[0]: #if the user creation is successfull
+                request.session['beatX_user']=userrAuth[1]
                 return redirect('Registration:index')
              else:
                  return render(request,'Registration/signup.html',{'message': userrAuth[1]})
         else:
-            return render(request,'Registration/signup.html',{'message': userrAuth[1]})
+            return render(request,'Registration/signup.html',{'message': 'password validation error'})
     else:
          return render(request,'Registration/signup.html')
 #when the user forget the password it provides the functionality to update the password

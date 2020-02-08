@@ -12,13 +12,13 @@
      <!-- Results of Searched Songs -->
        {% csrf_token %}
      <div class="song-title">
-       <a href="/beatXmusic/search/1/{{musicc.0 }}/">
+       <a href="/beatXmusic/search/1/{{musicc.0}}/">
          <label for="play">
            <img class="play-btn" src="{%static 'BeatXMusic/svg/play.svg' %}">
          </label>
          <img class="cover-art" src="{%static 'BeatXMusic/img/starboy.png'%}">
-
         </a>
+        
          <div class="title">
            <h1> {{musicc.2}} </h1>
            <p> Uploaded by <a href="#">{{ musicc.1 }}</a></p>

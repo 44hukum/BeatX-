@@ -18,9 +18,10 @@ from Registration.models import Registration,Friends
 
 def index(request):
     if request.session.has_key('beatX_user'):
-        a=request.session['beatX_user']
         beat=BeatXUsers() #creating the object of the
-        userobj=beat.userProfile(a)
+        userobj=beat.userProfile(request.session['beatX_user'])
+        if userobj == False:
+            return redirect('Registration:logout')
         name=userobj.username
         userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
 
@@ -44,8 +45,8 @@ def index(request):
          return render(request,'Registration/login.html')
 
 def pages(request,profile):
-
     if request.session.has_key('beatX_user'):
+        userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
         a=request.session['beatX_user']
         beat=BeatXUsers() #creating the object of the
         userobj=beat.userProfile(a)
@@ -66,6 +67,7 @@ def pages(request,profile):
             'profile':userobj.profile_pic,
             'nottofind':request.session['beatX_user'],
             'meto': ans,
+            'allthefriend':userfriendss,
             }
             return render(request,'BeatXMusic/homepage.html',objectsForHtmlPages)
         if profile == 'viewProfile':
@@ -76,17 +78,20 @@ def pages(request,profile):
             str=name.split() #converts the user name to the list
             str=''.join(str)
             uid='@'+str
-            return render(request,'BeatXMusic/userprofile.html',{'username':name,'uid':uid,'profile':userobj.profile_pic})
+            counter=Registration.register.get(username=request.session['beatX_user'])
+            friendCount=Friends.objects.filter(self_user_id=counter.id).count() #returns the total friends
+            return render(request,'BeatXMusic/userprofile.html',{'totalfr':friendCount,'allthefriend':userfriendss,'username':name,'uid':uid,'profile':userobj.profile_pic})
         else:
-            return render(request,'BeatXMusic/homepage.html',{'username':name,'profile':userobj.profile_pic})
+            return render(request,'BeatXMusic/homepage.html',{'allthefriend':userfriendss,'username':name,'profile':userobj.profile_pic})
 
-        return render(request,'BeatXMusic/homepage.html',{'message': profile })
+        return render(request,'BeatXMusic/homepage.html',{'allthefriend':userfriendss,'message': profile })
     else:
          return render(request,'Registration/login.html')
 
 
 #search for the songs
 def search(request,songs,uid):
+    userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
     if songs==1:
         if request.session.has_key('beatX_user'):
             a=request.session['beatX_user']
@@ -125,6 +130,7 @@ def search(request,songs,uid):
                     # 'title':musicList[0][2],
                     # 'Artist':getdata.artist,
                     'musicl':musicList,
+                    'allthefriend':userfriendss,
                 }
                 # return render(request,'BeatXMusic/aa.html',{'a':musicList})
                 return render(request,'BeatXMusic/homepage.html',context)
@@ -156,6 +162,7 @@ def search(request,songs,uid):
                  'uploader':getdata.user,
                  'title':getdata.title,
                  'Artist':getdata.artist,
+                 'allthefriend':userfriendss,
              }
              return render(request,'BeatXMusic/homepage.html',context)
              # return render(request,'BeatXMusic/homepage.html',{"aa":True})
@@ -165,6 +172,7 @@ def search(request,songs,uid):
 
 #search the friend
 def searchfriend(request):
+    userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
     if request.session.has_key('beatX_user'):
         a=request.session['beatX_user']
         beat=BeatXUsers() #creating the object of the user
@@ -186,12 +194,14 @@ def searchfriend(request):
         'profile':userobj.profile_pic,
         'nottofind':request.session['beatX_user'],
         'meto': ans,
+        'allthefriend':userfriendss,
         }
         return render(request,'BeatXMusic/homepage.html',objectsForHtmlPages)
     else:
          return render(request,'Registration/login.html')
 #updats the profile pic
 def uploadprofile(request):
+     userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
      if request.method=='POST':
          file=request.FILES['ChangeProfilePic']
          profile=(BeatXUsers()).userProfile(request.session['beatX_user'])
@@ -200,6 +210,7 @@ def uploadprofile(request):
          return redirect('BeatXMusic:index')
 #change profile from the profile pic
 def uploadprofilee(request):
+     userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
      if request.method=='POST':
          file=request.FILES['ChangeProfilePic']
          profile=(BeatXUsers()).userProfile(request.session['beatX_user'])
@@ -209,12 +220,13 @@ def uploadprofilee(request):
          str=name.split() #converts the user name to the list
          str=''.join(str)
          uid='@'+str
-         return render(request,'BeatXMusic/userprofile.html',{'username':name,'uid':uid,'profile':profile.profile_pic})
+         return render(request,'BeatXMusic/userprofile.html',{'allthefriend':userfriendss,'username':name,'uid':uid,'profile':profile.profile_pic})
 
 def playSong(request,songId):
     pass
 #search a song
 def searchSong(request):
+    userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
     if request.session.has_key('beatX_user'):
         a=request.session['beatX_user']
         beat=BeatXUsers() #creating the object of the
@@ -253,11 +265,13 @@ def searchSong(request):
                 # 'title':musicList[0][2],
                 # 'Artist':getdata.artist,
                 'musicl':musicList,
+                'allthefriend':userfriendss,
             }
             # return render(request,'BeatXMusic/aa.html',{'a':musicList})
             return render(request,'BeatXMusic/homepage.html',context)
 #functrion to update friend
 def updateProfile(request):
+    userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
     if request.method=='POST':
         user=request.POST['username']
         phone_number=request.POST['phone_number']
@@ -284,10 +298,12 @@ def updateProfile(request):
         'update':'update',
         'number':userobj.phone_number,
         'password':userobj.password,
+        'allthefriend':userfriendss,
          }
         return render(request,'BeatXMusic/userprofile.html',data)
 #downloading files
 def download(request, path):
+
     pathS=Song.objects.get(pk=path)
     a=str(pathS.song)
     file_path = os.path.join(settings.MEDIA_ROOT, a)
@@ -300,6 +316,7 @@ def download(request, path):
 
 #function to add friend
 def addfriend(request,profile,uid):
+    userfriendss=(ListFriend()).listfriend(request.session['beatX_user'])
     a=request.session['beatX_user']
     beat=BeatXUsers() #creating the object of the
     userobj=beat.userProfile(a)

@@ -30,7 +30,7 @@
                     <a href="#" style="left: 43em;">
                         <h1> Friends </h1>
                         <!-- User Friends will be updated from User's Friend Database -->
-                        <h2> 20 </h2>
+                        <h2>{{totalfr}}</h2>
                     </a>
                     <a href="#" style="right: 47em;">
                         <h1> Playlists </h1>
@@ -50,6 +50,7 @@
            {% include 'BeatXMusic/update.html' %}
            {% endif %}
            <br><br>
+
            <div class="edit-profile">
                 <a href="{%url 'Registration:deleteUser' %}">  Delete User </a>
            </div>

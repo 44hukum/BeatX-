@@ -25,6 +25,7 @@ class Registration(models.Model):
 
     def __str__(self):
         return self.username
+    
 
 #friend class for registering the friends
 class Friends(models.Model):
