@@ -1,4 +1,4 @@
-# BeatX_ADC5
+# BeatX-
 BeatX is a music streaming platfrom where a user can upload their music and listen from any device as per their wish.
 <br>
 Requirement as a editor: <br>
