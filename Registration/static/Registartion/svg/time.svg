@@ -1,6 +1,1 @@
-<svg id="clock-circular-outline" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
-  <g id="Group_11" data-name="Group 11">
-    <path id="Path_46" data-name="Path 46" d="M14,0A14,14,0,1,0,28,14,14.016,14.016,0,0,0,14,0Zm0,25.021A11.021,11.021,0,1,1,25.021,14,11.034,11.034,0,0,1,14,25.021Z" fill="#fff"/>
-    <path id="Path_47" data-name="Path 47" d="M52.663,25.548H46.371V17.983a1.153,1.153,0,1,0-2.305,0V26.7a1.153,1.153,0,0,0,1.153,1.153h7.444a1.153,1.153,0,1,0,0-2.305Z" transform="translate(-31.367 -11.98)" fill="#fff"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="clock-circular-outline" width="28" height="28" viewBox="0 0 28 28"><g id="Group_11" data-name="Group 11"><path id="Path_46" fill="#fff" d="M14,0A14,14,0,1,0,28,14,14.016,14.016,0,0,0,14,0Zm0,25.021A11.021,11.021,0,1,1,25.021,14,11.034,11.034,0,0,1,14,25.021Z" data-name="Path 46"/><path id="Path_47" fill="#fff" d="M52.663,25.548H46.371V17.983a1.153,1.153,0,1,0-2.305,0V26.7a1.153,1.153,0,0,0,1.153,1.153h7.444a1.153,1.153,0,1,0,0-2.305Z" data-name="Path 47" transform="translate(-31.367 -11.98)"/></g></svg>
