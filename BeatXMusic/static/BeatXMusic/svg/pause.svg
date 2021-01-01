@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="79.999" viewBox="0 0 80 79.999">
-  <g id="pause" transform="translate(-910 -879)">
-    <g id="Play" transform="translate(910 879)">
-      <path id="Combined_Shape" data-name="Combined Shape" d="M39.679,80h0A40.011,40.011,0,0,1,24.43,3.143,39.988,39.988,0,0,1,80,40c0,.219,0,.444-.005.668h-.672c0-.209.005-.434.005-.668A39.328,39.328,0,1,0,39.679,79.327V80Z" transform="translate(0 0)" fill="#e53a88"/>
-      <path id="Combined_Shape_Copy" data-name="Combined Shape Copy" d="M36.208,73h0A36.511,36.511,0,0,1,22.293,2.868,36.49,36.49,0,0,1,73,36.5c0,.2,0,.4-.005.61h-.613c0-.191.005-.4.005-.61A35.888,35.888,0,1,0,36.208,72.387V73Z" transform="translate(76.002 76.001) rotate(180)" fill="#e53a88"/>
-    </g>
-    <path id="ic_pause_24px" d="M6,38.416h9.547V5H6ZM25.095,5V38.416h9.547V5Z" transform="translate(930 896.584)" fill="#fff"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="79.999" viewBox="0 0 80 79.999"><g id="pause" transform="translate(-910 -879)"><g id="Play" transform="translate(910 879)"><path id="Combined_Shape" fill="#e53a88" d="M39.679,80h0A40.011,40.011,0,0,1,24.43,3.143,39.988,39.988,0,0,1,80,40c0,.219,0,.444-.005.668h-.672c0-.209.005-.434.005-.668A39.328,39.328,0,1,0,39.679,79.327V80Z" data-name="Combined Shape" transform="translate(0 0)"/><path id="Combined_Shape_Copy" fill="#e53a88" d="M36.208,73h0A36.511,36.511,0,0,1,22.293,2.868,36.49,36.49,0,0,1,73,36.5c0,.2,0,.4-.005.61h-.613c0-.191.005-.4.005-.61A35.888,35.888,0,1,0,36.208,72.387V73Z" data-name="Combined Shape Copy" transform="translate(76.002 76.001) rotate(180)"/></g><path id="ic_pause_24px" fill="#fff" d="M6,38.416h9.547V5H6ZM25.095,5V38.416h9.547V5Z" transform="translate(930 896.584)"/></g></svg>
