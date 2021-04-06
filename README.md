@@ -1,10 +1,10 @@
 ![](1st.png)
 
 # BeatX-
-BeatX is a music streaming platfrom where a user can upload their music and listen from any device as per their wish.
+BeatX is a music streaming social network where users around the globe connect with eachother through music they love to listen.
 <br>
-Requirement as a editor: <br>
-python3 installed<br>
+Requirement for initial setup: 
+ [Install python3 from here.](https://www.python.org/downloads/)
 <p>
 and pip:<br>
         asgiref           3.2.3<br>
@@ -32,9 +32,9 @@ and pip:<br>
 </p>
 <p>
 <h1>Api Documentation:</h1>
-     for get/post request: use the root/path/songs<br>
-     for put/delete/get by id: use root/path/songs/<int:pk><br>
-     for pagination:<br>
+     ```for get/post request: use the root/path/songs```<br>
+     ```for put/delete/get by id: use root/path/songs/<int:pk>```<br>
+     ```for pagination:<br>
      pagenumber=refers to the page number<br> 
      pagesize = refers to page size<br>
-        and the url: root/path/songs/pagenumber=<int:pk>/pagezie=<int:size></p><br>
+        and the url: root/path/songs/pagenumber=<int:pk>/pagezie=<int:size></p>```<br>
