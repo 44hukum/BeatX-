@@ -32,9 +32,16 @@ and pip:<br>
 </p>
 <p>
 <h1>Api Documentation:</h1>
-     ```for get/post request: use the root/path/songs```<br>
-     ```for put/delete/get by id: use root/path/songs/<int:pk>```<br>
-     ```for pagination:<br>
+     ```
+      for get/post request: use the root/path/songs
+     ```
+     <br>
+     ```
+     for put/delete/get by id: use root/path/songs/<int:pk>
+     ```<br>
+     ```
+     for pagination:<br>
      pagenumber=refers to the page number<br> 
      pagesize = refers to page size<br>
-        and the url: root/path/songs/pagenumber=<int:pk>/pagezie=<int:size></p>```<br>
+     and the url: root/path/songs/pagenumber=<int:pk>/pagezie=<int:size></p>
+        ```<br>
